@@ -1,0 +1,103 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+@import "normalize";
+@import "bourbon";
+@import "neat";
+@import "colors";
+@import "typography";
+
+body {
+  /*background: $black url(../images/bg.svg) no-repeat 100% 100%;*/
+  background: $white;
+  max-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  //@include row(table);
+}
+
+header {
+  //@include span-columns(6);
+  @include pad();
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  color: $butter;
+  background: #efefef;
+  text-align: center;
+
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        &:hover i.fa {
+          border: rem(10px) solid rgba($black, .5);
+          background: rgba(255,255,255, 1.0)
+        }
+        i.fa {
+          @include size(rem(100px));
+          background: rgba(250,255,255, 0.8);
+          border-radius: 100%;
+          border: rem(10px) solid rgba($black, .1);
+          color: rgba($black, 0.8);
+          font-size: rem(60px);
+          line-height: rem(80px);
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  h1 {
+    color: $black;
+    size: rem(20px);
+  }
+
+  p {
+    color: $black;
+  }
+
+  .photo {
+    border-radius: 100%;
+    width: 39%;
+    border: rem(10px) solid rgba($black, .1);
+  }
+}
+
+
+section {
+  //@include span-columns(6);
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  background: $butter;
+
+  aside  {
+    /*@include grid-column($columns:6);*/
+    // @media #{$medium-up} {
+    //   @include grid-column($columns:3);
+    // }
+  }
+
+  article  {
+    float: left;
+    width: 100%;
+    height: 5em;
+    background: #efefef;
+    /*@include grid-column($columns:6);*/
+    // @media #{$medium-up} {
+    //   @include grid-column($columns:8, $offset: 1);
+    // }
+  }
+
+}
+
+footer {
+  @include span-columns(12);
+  background:blue;
+}
