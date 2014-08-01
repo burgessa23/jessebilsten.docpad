@@ -7,7 +7,6 @@ docpadConfig = {
     site:
       # The website's styles
       styles: [
-        #'/styles/font-awesome.css'
         '/styles/style.css'
       ]	# ...
 
