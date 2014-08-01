@@ -24,7 +24,7 @@ header {
   height: 100%;
   position: fixed;
   left: 0;
-  color: $butter;
+  color: $black;
   background: #efefef;
   text-align: center;
 
@@ -36,11 +36,11 @@ header {
         display: block;
         &:hover i.fa {
           border: rem(10px) solid rgba($black, .5);
-          background: rgba(255,255,255, 1.0)
+          background: $white;
         }
         i.fa {
           @include size(rem(100px));
-          background: rgba(250,255,255, 0.8);
+          background: rgba(255,255,255, 0.8);
           border-radius: 100%;
           border: rem(10px) solid rgba($black, .1);
           color: rgba($black, 0.8);
@@ -75,7 +75,7 @@ section {
   height: 100%;
   position: fixed;
   right: 0;
-  background: $butter;
+  background: $white;
 
   aside  {
     /*@include grid-column($columns:6);*/
