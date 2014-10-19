@@ -9,44 +9,44 @@
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans);
 
 body {
-  /*background: $black url(../images/bg.svg) no-repeat 100% 100%;*/
-  background: $white;
+  background: #efefef;
   max-width: 100%;
   height: 100%;
   min-height: 100%;
   margin: 0 auto;
-  //@include row(table);
+  font-family: Open Sans;
+  color: #222;
 }
 
 header {
-  //@include span-columns(6);
   @include pad();
   width: 50%;
-  height: 100%;
-  position: fixed;
-  left: 0;
+  float: left;
   color: $black;
-  background: #efefef;
   text-align: center;
 
   ul {
     list-style: none;
+    padding-left: 0;
+    width: 67%;
+    margin: 1.6em auto;
     li {
       display: inline-block;
       a {
         display: block;
+        margin: 0.5em;
+        width: 16%;
         &:hover i.fa {
-          border: rem(10px) solid rgba($black, .5);
-          background: $white;
+          background: rgba(0,0,0, 0.9);
+          color: white;
         }
         i.fa {
-          @include size(rem(100px));
-          background: rgba(255,255,255, 0.8);
+          background: white;
           border-radius: 100%;
-          border: rem(10px) solid rgba($black, .1);
-          color: rgba($black, 0.8);
-          font-size: rem(60px);
-          line-height: rem(80px);
+          color: rgba(0,0,0, 0.9);
+          font-size: 2em;
+          line-height: 2em;
+          width: 2em;
           overflow: hidden;
         }
       }
@@ -55,50 +55,69 @@ header {
 
   h1 {
     color: $black;
-    size: rem(20px);
+    font-size: em(30px);
+    font-family: Open Sans;
+    width: 62%;
+    margin: 1.6em auto;
   }
 
   p {
     color: $black;
+    text-align: left;
+    width: 62%;
+    margin: 1.6em auto;
   }
 
   .photo {
     border-radius: 100%;
-    width: 39%;
-    border: rem(10px) solid rgba($black, .1);
+    width: 37%;
+    border: rem(10px) solid white;
   }
 }
 
 
 section {
-  //@include span-columns(6);
   width: 50%;
-  height: 100%;
-  position: fixed;
-  right: 0;
-  background: $white;
-
-  aside  {
-    /*@include grid-column($columns:6);*/
-    // @media #{$medium-up} {
-    //   @include grid-column($columns:3);
-    // }
-  }
+  margin-left: 50%;
+  background: white;
 
   article  {
     float: left;
     width: 100%;
-    height: 5em;
-    background: #efefef;
-    /*@include grid-column($columns:6);*/
-    // @media #{$medium-up} {
-    //   @include grid-column($columns:8, $offset: 1);
-    // }
+    background: white;
+    @include pad(3.2em);
+    border-bottom: 1px solid #efefef;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    &:hover {
+      background: rgba(0,0,0,0.9);
+      cursor: pointer;
+      color: white;
+      small {
+        color: rgba(255,255,255, 0.2);
+      }
+    }
+    small {
+      color: rgba(0,0,0, 0.2);
+      time[readingtime] {
+        float: right;
+      }
+      time[pubdate] {
+        float: left;
+      }
+    }
+    h2 {
+      margin: 0;
+    }
   }
 
 }
 
 footer {
-  @include span-columns(12);
-  background:blue;
+  float: left;
+  width: 50%;
+  @include pad();
+  text-align: center;
 }

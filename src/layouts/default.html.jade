@@ -50,50 +50,56 @@ body
       :t(render="markdown") You are using an **outdated browser**. Please [upgrade your browser](http://browsehappy.com/) to improve your experience.
 
   header
+    h1 Hello, my name is Jesse Bilsten
     img.photo(src="images/profile_digital.png")
-    h1 Jesse Bilsten
-    p I'm a curious convergence of design, business, and engineering. I make delightfully beautiful, easy-to-use things.
+    p I'm a curious convergence of designer, developer, and entrepreneur. I am passionate about user experience and enjoy creating products that delight and amuse people.
+    p I currently hang my hat at GoDaddy as a designer and have a golfing habit.
     ul
       li
-        a(href="")
+        a(href=site.links.github)
           i.fa.fa-github-alt
           //-| Github
       li
-        a(href="") 
+        a(href=site.links.codepen)
           i.fa.fa-codepen
           //-| Codepen
       li
-        a(href="")
+        a(href=site.links.dribbble)
           i.fa.fa-dribbble
           //-| Dribbble
       li
-        a(href="")
+        a(href=site.links.twitter)
           i.fa.fa-twitter
           //-| Twitter
       li
-        a(href="")
+        a(href=site.links.facebook)
           i.fa.fa-facebook
           //-| Facebook
       li
-        a(href="") 
+        a(href=site.links.instagram)
           i.fa.fa-instagram
           //-| Instagram
 
   section
+    - for (var i=0; i<10; i++) {
+      article
+        h2
+          a(href="") #{i} reasons a title should be short for articles
+        small
+          time(pubdate datetime="") December 21st 1978
+        small
+          time(readingtime datetime="PT 4M") 4 min read
+    - }
     article
-      h2 21 reasons a title should be short for articles
-      small
-        time(pubdate datetime="") December 21st 1978
-      small
-        time(readingtime datetime="PT 4M") 4 min read
-    article 
-      h2 The death of the traditional CMS
+      h2
+        a(href="") The death of the traditional CMS
       small
         time(pubdate datetime="") December 21st 1978
       small
         time(readingtime datetime="PT 4M") 4 min read
     article.loading
-      h2 Why waterfall and fixed bid are like dating the mentally instable
+      h2
+        a(href="") Why waterfall and fixed bid are like dating the mentally instable
       small
         time(pubdate datetime="") December 21st 1978
       small
