@@ -1,0 +1,15 @@
+$max-width: 64em;
+$visual-grid: true !global;
+$visual-grid-color: #eee !global;
+$visual-grid-index: front !global;
+$visual-grid-opacity: .2 !global;
+
+@import 'normalize';
+@import 'bourbon';
+@import 'modules/grid-settings';
+@import 'neat';
+@import 'modules/typography';
+@import 'modules/colors';
+@import 'modules/buttons';
+@import 'partials/main';
+@import 'partials/header';

@@ -7,23 +7,22 @@ docpadConfig = {
     site:
       # The website's styles
       styles: [
-        '/styles/style.css'
+        'styles/master.css'
+      ]
+      scripts: [
+        'vendor/jquery/dist/jquery.js'
+        'scripts/script.js'
       ]
       # ...
 
       links:
-        email: "emailto:jesse@bilsten.net"
-        github: "//github.com/JesseBilsten"
-        codepen: "//codepen.io/JesseBilsten"
-        dribbble: "//dribbble.com/jessebilsten"
-        twitter: "//twitter.com/lostangel"
-        facebook: "//www.facebook.com/bilsten"
-        instagram: "//instagram.com/jbilsten"
+        email: "emailto:info@andrewburgess.info"
+        github: "//github.com/burgessa23"
 
   plugins:
-    nodesass:
-      bourbon: true
-      neat: true
+    sass:
+      compass: false
+      requireLibraries: ['bourbon','neat']
 }
 
 # Export the DocPad Configuration

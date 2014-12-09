@@ -1,0 +1,27 @@
+@import 'neat-helpers';
+
+$phone-portrait-max: em(519);
+$phone-landscape-min: em(520);
+$phone-landscape-max: em(759);
+$phone-retina-2x: 2dppx;
+$phone-retina-3x: 3dppx;
+
+$phablet-portrait-min: em(520);
+$phablet-portrait-max: em(759);
+$phablet-landscape-min: em(760);
+$phablet-landscape-max: em(1023);
+
+$tablet-portrait-min: em(760);
+$tablet-portrait-max: em(1023);
+$tablet-landscape-min: em(1024);
+
+
+$phone-portrait: new-breakpoint(max-width $phone-portrait-max 12);
+$phone-portrait-retina: new-breakpoint(max-width $phone-portrait-max min-resolution $phone-retina-3x 6);
+$phone-landscape: new-breakpoint(min-width $phone-landscape-min max-width $phone-landscape-max orientation landscape 9);
+$phablet-portrait: new-breakpoint(min-width $phablet-portrait-min max-width $phablet-portrait-max 9);
+$phablet-portrait-forced: new-breakpoint(min-width $phablet-portrait-min max-width $phablet-portrait-max -webkit-min-device-pixel-ratio 3 orientation portrait 9);
+$phablet-landscape-forced: new-breakpoint(min-width $phablet-landscape-min max-width $phablet-landscape-max min-resolution $phone-retina-3x 12);
+$phablet-landscape: new-breakpoint(min-width $phablet-landscape-min max-width $phablet-landscape-max orientation landscape 12);
+$tablet-portrait: new-breakpoint(min-width $tablet-portrait-min max-width $tablet-portrait-max 12);
+$tablet-landscape: new-breakpoint(min-width $tablet-landscape-min orientation landscape 12);
